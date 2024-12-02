@@ -29,3 +29,4 @@ def run_game():
         pg.display.update()
     pg.quit()
     sys.exit()
+    

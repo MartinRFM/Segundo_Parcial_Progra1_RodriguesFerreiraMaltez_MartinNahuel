@@ -27,6 +27,11 @@ def sort_matrix(matrix: list[list]):
             if int(matrix[i][1]) < int(matrix[j][1]):
                 matrix[i], matrix[j] =\
                 matrix[j], matrix[i]
+                
+def grabar_puntaje(jugador):
+    with open(PUNTOS, '+a') as rkn:
+        rkn.write(jugador.to_csv_format())
+        print('PUNTAJE GUARDADO CON ÉXITO!')
 
 def cargar_ranking():
     ranking = []
@@ -45,6 +50,3 @@ fondo = pg.transform.scale(fondo_raw, (800, 600))
 
 fuente_sn = pg.font.Font('./assets/fonts/Impact.ttf', 40)
 fuente_cn = pg.font.Font('./assets/fonts/Sufinter.otf', 40)
-
-# Para cargar fuentes del sistema, usar SysFont
-# fuente = pg.font.SysFont('Arial', 40)

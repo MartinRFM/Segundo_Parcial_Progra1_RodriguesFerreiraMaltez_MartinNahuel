@@ -31,3 +31,8 @@ class Button(Widget):
     def update(self):
         self.draw()
         self.button_pressed()
+        
+    def handle_event(self, event): 
+        if event.type == pg.MOUSEBUTTONDOWN: 
+            if self.rect.collidepoint(event.pos): 
+                self.on_click(self.on_click_param)

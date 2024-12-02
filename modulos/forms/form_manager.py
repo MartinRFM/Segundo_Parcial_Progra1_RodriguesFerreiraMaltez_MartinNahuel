@@ -9,6 +9,7 @@ from .form_ranking import FormRanking
 from .form_options import FormOptions
 from .form_pause import FormPause
 from .form_enter_name import FormEnterName
+from .form_screen_game import FormGame
 
 
 
@@ -26,8 +27,8 @@ class FormManager:
             FormRanking(name='form_rankings', pantalla=self.main_screen, x=0, y=0, active=True, level_num=1, music_path=SONIDO_MENU, ranking_list=self.ranking_db),
             FormOptions(name='form_options', pantalla=self.main_screen, x=0, y=0, active=True, level_num=1, music_path=SONIDO_MENU),
             FormPause(name="form_pause",pantalla=self.main_screen,x=0,y=0,active=True,level_num=self.current_level,music_name=SONIDO_MENU),
-            # FormEnterName(name="form_enter_name",pantalla=self.main_screen,x=0,y=0,active=True,level_num=1,music_name=SONIDO_MENU,score=self.player.get_puntaje())
-            
+            FormGame(name="form_screen_game",pantalla=self.main_screen,x=0,y=0,active=True,level_num=2, music_path=SONIDO_MENU)
+            #FormEnterName(name="form_enter_name",pantalla=self.main_screen,x=0,y=0,active=True,level_num=1,music_name=SONIDO_MENU,score=0)
         ]
     
     def keys_update(self,event_list:list)->None:

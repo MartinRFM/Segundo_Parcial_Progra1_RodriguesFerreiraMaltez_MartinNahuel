@@ -15,7 +15,7 @@ class FormPause(Form):
         self.current_level_number = level_num
         self.paused = pg.mixer.music.get_busy() 
 
-        self.surface = pg.image.load('assets/img/forms/MENU.jpg').convert_alpha()
+        self.surface = pg.image.load('assets/img/forms/form_options.png').convert_alpha()
         self.surface = pg.transform.scale(self.surface, DIMENSION_PANTALLA)
         self.slave_rect = self.surface.get_rect()
         self.slave_rect.x = x
@@ -31,8 +31,8 @@ class FormPause(Form):
         
         self.widget_list = [self.menu_ppal_subtitle,self.menu_ppal_title,self.button_resume,
         self.button_restart,self.button_music,self.button_return_menu]
-           
-       
+        
+        
     def click_resume(self,parametro:str)->None:  
         '''
         Sets active start level form and sets level number 

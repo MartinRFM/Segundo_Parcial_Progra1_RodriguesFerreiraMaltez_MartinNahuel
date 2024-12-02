@@ -9,3 +9,9 @@ class Widget:
     
     def draw(self):
         self.pantalla.blit(self.image, (self.rect.x, self.rect.y))
+    
+    def update(self):
+        pass
+    
+    def handle_event(self, event):
+        pass

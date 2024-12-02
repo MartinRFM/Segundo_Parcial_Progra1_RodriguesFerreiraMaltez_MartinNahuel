@@ -10,7 +10,7 @@ class FormRanking(Form):
     def __init__(self, name, pantalla, x, y, active, level_num, music_path, ranking_list: list):
         super().__init__(name, pantalla, x, y, active, level_num, music_path)
         
-        self.surface = pg.image.load('assets/img/forms/MENU.jpg').convert_alpha()
+        self.surface = pg.image.load('assets/img/forms/ranking.png').convert_alpha()
         self.surface = pg.transform.scale(self.surface, DIMENSION_PANTALLA)
         self.slave_rect = self.surface.get_rect()
         self.slave_rect.x = x
